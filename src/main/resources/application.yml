@@ -1,0 +1,46 @@
+spring:
+  datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      username: yeafel
+      password: root
+      url: jdbc:mysql://192.168.34.139/sell?characterEncoding=utf-8&useSSL=false
+
+  jpa:
+    show-sql: true
+  jackson:
+    default-property-inclusion: non_null
+  redis:
+    host: 192.168.34.147
+    port: 6379
+
+server:
+  servlet:
+    context-path: /sell
+
+
+#logging:
+#  pattern:
+#    console: "%d - %msg%n"
+##  path: /var/log/tomcat/
+#  file: /var/log/tomcat/sell.log
+#  level:
+#    com.yeafel.LoggerTest: debug
+
+
+wechat:
+  mpAppId: wx16eeb212c471a1cf
+  mpAppSecret: 9054dbc345d8b56e02c4201572e3695d
+#  openAppid:
+#  openAppSecret:
+#  mchId:
+#  mchKey:
+#  keyPath:  /var/weixin_cert/h5.p12
+#  notifyUrl:
+  templateId:
+      orderStatus: Hgi5POz8t89RzcOmfSYgfPjSX_lt8mHpntMchoY1V6c
+logging:
+  level:
+     com.yeafel.dataobject.mapper: trace
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
